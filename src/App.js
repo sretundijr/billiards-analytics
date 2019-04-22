@@ -8,8 +8,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Hello new app</h1>
-        <NineBallGhost />
       </header>
+      <section className='App-gameContainer'>
+        <NineBallGhost />
+      </section>
     </div>
   );
 }

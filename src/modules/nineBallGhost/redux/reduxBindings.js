@@ -1,11 +1,13 @@
 import { bindActionCreators } from 'redux';
 
+import NineBallGhostActions from './actions';
+
 export const mapStateToProps = state => ({
   ...state.NineBallGhostState
 })
 
 export const mapDispatchToProps = dispatch => {
   return {
-    actions: bindActionCreators({}, dispatch)
+    actions: bindActionCreators(NineBallGhostActions, dispatch)
   }
 }

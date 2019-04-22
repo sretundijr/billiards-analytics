@@ -6,7 +6,7 @@ import './arrowUpDownButton.css';
 
 const ArrowUpDownButton = (props) => {
   return (
-    <button className='arrowUpDownButton'>
+    <button className='arrowUpDownButton' onClick={props.onClick} >
       {
         <FontAwesomeIcon icon={props.pointUp ? faArrowCircleUp : faArrowAltCircleDown} />
       }

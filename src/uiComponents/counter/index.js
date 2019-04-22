@@ -7,9 +7,9 @@ import './index.css';
 const BallCounter = (props) => {
   return (
     <div className='ballCounter'>
-      <ArrowUpDownButton pointUp={false} />
+      <ArrowUpDownButton pointUp={false} onClick={props.actions.removeFromBallCount} />
       <span className='ballCounter-ballCount'>{props.ballCount ? props.ballCount : 0}</span>
-      <ArrowUpDownButton pointUp={true} />
+      <ArrowUpDownButton pointUp={true} onClick={props.actions.addToBallCount} />
     </div>
   )
 }

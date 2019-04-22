@@ -2,12 +2,19 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { mapStateToProps, mapDispatchToProps } from './redux/reduxBindings';
 
+import PlusButton from '../../elements/buttons/plusButton';
+import ScoreInput from './components/scoreInput';
+
 import './index.css';
 
 const NineBallGhost = (props) => {
   return (
-    <div>
-      Nine Ball Ghost
+    <div className='nineBallGhost'>
+      <div>
+        Nine Ball Ghost
+      </div>
+      <PlusButton label='Add a Rack' />
+      <ScoreInput {...props} />
     </div>
   )
 }
