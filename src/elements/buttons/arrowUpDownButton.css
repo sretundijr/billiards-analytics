@@ -1,0 +1,9 @@
+
+.arrowUpDownButton {
+  background: transparent;
+  font-size: 40px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
