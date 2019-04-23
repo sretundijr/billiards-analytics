@@ -7,8 +7,8 @@ import ScoreElement from './scoreElement';
 const ScoreOutput = (props) => {
   return (
     <div>
-      <Scores.ScoreList {...props} >
-        <Scores.ScoreListItem>
+      <Scores.ScoreList>
+        <Scores.ScoreListItem {...props}>
           <ScoreElement />
         </Scores.ScoreListItem>
       </Scores.ScoreList>
