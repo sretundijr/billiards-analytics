@@ -10,9 +10,9 @@ const ScoreList = (props) => {
 };
 
 const ScoreListItem = (props) => {
-  return props.gameScores.map((score) => {
+  return props.gameScores.map((score, index) => {
     return (
-      <li>
+      <li key={`${props.keyIndentifier}-${index}`} >
         {React.cloneElement(props.children, score)}
       </li>
     )
