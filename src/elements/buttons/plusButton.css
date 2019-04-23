@@ -1,8 +1,5 @@
 
 .plusButton {
-  box-shadow: none;
-  border-style: solid;
-  cursor: pointer;
   font-size: 20px;
   padding: 5px;
 }
