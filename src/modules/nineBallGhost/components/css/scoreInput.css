@@ -3,3 +3,9 @@
   text-align: center;
   padding-top: 10px;
 }
+
+.scoreInput-checkboxContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
