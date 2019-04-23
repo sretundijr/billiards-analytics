@@ -13,6 +13,13 @@ const ScoreInput = (props) => {
         onClick={props.actions.nineBallClick}
         checked={props.nineBallChecked}
       />
+      {props.nineBallChecked &&
+        <CheckBoxButton
+          label='Was the nine ball pocketed on the break?'
+          onClick={props.actions.nineBallBreakClick}
+          checked={props.nineBallBreak}
+        />
+      }
     </div>
   )
 }
