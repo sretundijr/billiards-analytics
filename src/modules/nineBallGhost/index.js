@@ -13,7 +13,7 @@ const NineBallGhost = (props) => {
       <div>
         Nine Ball Ghost
       </div>
-      <PlusButton label='Submit Score' />
+      <PlusButton label='Submit Score' onClick={props.actions.submitScore} />
       <ScoreInput {...props} />
     </div>
   )

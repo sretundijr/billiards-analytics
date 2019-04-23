@@ -6,7 +6,7 @@ import './plusButton.css';
 
 const PlusButton = (props) => {
   return (
-    <button className={`${props.className} plusButton`}>
+    <button className={`${props.className} plusButton`} onClick={props.onClick} >
       <FontAwesomeIcon icon={faPlus} className='plusButton-icon' />
       {props.label ? props.label : 'I need a label'}
     </button>

@@ -1,9 +1,12 @@
+
 import { ACTION_CONSTANTS } from './actions';
 
 const initialState = () => {
   return Object.assign({
     ballCount: 0,
-    nineBallChecked: false
+    nineBallChecked: false,
+    nineBallBreak: false,
+    gameScores: []
   })
 }
 
@@ -15,6 +18,10 @@ const NineBallGhostReducer = (state = initialState(), action) => {
       return removeFromBallCount(state);
     case ACTION_CONSTANTS.NINE_BALL_CLICK:
       return nineBallClick(state);
+    case ACTION_CONSTANTS.NINE_BALL_BREAK_CLICK:
+      return nineBallBreakClick(state);
+    case ACTION_CONSTANTS.SUBMIT_SCORE:
+      return Object.assign({}, state, action.data)
     default:
       return state;
   }
@@ -40,5 +47,13 @@ export const nineBallClick = (state) => {
     nineBallChecked: !state.nineBallChecked
   })
 }
+
+export const nineBallBreakClick = (state) => {
+  return Object.assign({}, state, {
+    nineBallBreak: !state.nineBallBreak
+  })
+}
+
+
 
 export default NineBallGhostReducer;
