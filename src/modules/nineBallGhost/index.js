@@ -13,7 +13,7 @@ const NineBallGhost = (props) => {
       <div>
         Nine Ball Ghost
       </div>
-      <PlusButton label='Add a Rack' />
+      <PlusButton label='Submit Score' />
       <ScoreInput {...props} />
     </div>
   )

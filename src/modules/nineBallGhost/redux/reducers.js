@@ -22,13 +22,16 @@ const NineBallGhostReducer = (state = initialState(), action) => {
 
 export const addToBallCount = (state) => {
   return Object.assign({}, state, {
-    ballCount: state.ballCount < 9 ? ++state.ballCount : state.ballCount
+    ballCount: state.ballCount < 9 ? ++state.ballCount : state.ballCount,
+    nineBallChecked: state.ballCount === 9 ? true : state.nineBallChecked
   })
 }
 
 export const removeFromBallCount = (state) => {
+  const unCheckNineBall = (state.ballCount === 9 || state.ballCount === 1) ? false : state.nineBallChecked;
   return Object.assign({}, state, {
-    ballCount: state.ballCount > 0 ? --state.ballCount : 0
+    ballCount: state.ballCount > 0 ? --state.ballCount : 0,
+    nineBallChecked: unCheckNineBall
   })
 }
 

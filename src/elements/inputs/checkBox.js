@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './checkBox.css'
+
 const CheckBox = (props) => {
   return (
     <div className='checkBoxWithLabel' >
