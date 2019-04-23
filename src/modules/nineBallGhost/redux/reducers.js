@@ -44,17 +44,25 @@ export const removeFromBallCount = (state) => {
 
 export const nineBallClick = (state) => {
   return Object.assign({}, state, {
-    nineBallBreak: state.nineBallChecked ? false : state.nineBallBreak,
-    nineBallChecked: !state.nineBallChecked
+    nineBallBreak: updateNineBallBreakStatus(state),
+    nineBallChecked: !state.nineBallChecked,
+    ballCount: updateBallCountForNineBallBreak(state.ballCount)
   })
 }
 
 export const nineBallBreakClick = (state) => {
   return Object.assign({}, state, {
-    nineBallBreak: !state.nineBallBreak
+    nineBallBreak: !state.nineBallBreak,
   })
 }
 
+export const updateBallCountForNineBallBreak = (ballCount) => ballCount === 0 ? 1 : ballCount;
 
+export const updateNineBallBreakStatus = (state) => {
+  if (state.ballCount === 0 && state.nineBallChecked === false) {
+    return true;
+  }
+  return state.nineBallChecked ? false : state.nineBallBreak
+}
 
 export default NineBallGhostReducer;
