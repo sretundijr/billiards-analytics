@@ -3,10 +3,12 @@ import React from 'react';
 import BallCounter from '../../../uiComponents/counter/index';
 import CheckBoxButton from '../../../elements/buttons/checkBoxButton';
 
+import './css/scoreInput.css';
+
 const ScoreInput = (props) => {
   return (
-    <div>
-      <span>Number of Balls Pocketed</span>
+    <div className='scoreInput'>
+      <div className='scoreInput-ballCountLabel'>Number of Balls Pocketed</div>
       <BallCounter {...props} />
       <CheckBoxButton
         label='Was the Nine Ball pocketed'
