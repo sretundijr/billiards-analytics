@@ -11,6 +11,7 @@ const SubmitNineBallScore = (state) => {
     rackDateTime: `${todaysDate}`,
     nineBallPocketed: state.nineBallChecked,
     nineBallBreak: state.nineBallBreak,
+    breakAndRun: wasBreakAndRun(state),
     totalPoints
   }
   return Object.assign({}, state, {
@@ -19,6 +20,13 @@ const SubmitNineBallScore = (state) => {
     nineBallBreak: false,
     gameScores: [...state.gameScores, rackData]
   })
+}
+
+const wasBreakAndRun = (state) => {
+  if (state.ballCount === 9 && !state.nineBallBreak) {
+    return true;
+  }
+  return false;
 }
 
 export default SubmitNineBallScore;

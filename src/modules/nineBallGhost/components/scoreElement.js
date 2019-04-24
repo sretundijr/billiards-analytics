@@ -10,6 +10,7 @@ const ScoreElement = (props) => {
       <span>Total Points: {props.totalPoints}</span>
       <span>Nine Ball Pocketed: {yesOrNoString(props.nineBallPocketed)}</span>
       <span>Nine Ball Break: {yesOrNoString(props.nineBallBreak)}</span>
+      <span>Break and Run: {yesOrNoString(props.breakAndRun)}</span>
     </div>
   )
 }
