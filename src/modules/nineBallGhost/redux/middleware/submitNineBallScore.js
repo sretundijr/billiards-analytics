@@ -22,7 +22,7 @@ const SubmitNineBallScore = (state) => {
   })
 }
 
-const wasBreakAndRun = (state) => {
+export const wasBreakAndRun = (state) => {
   if (state.ballCount === 9 && !state.nineBallBreak) {
     return true;
   }

@@ -1,5 +1,5 @@
 import MockData from './mockData';
-import SubmitNineBallScore from '../submitNineBallScore';
+import SubmitNineBallScore, { wasBreakAndRun } from '../submitNineBallScore';
 
 describe('nine ball score data', () => {
 
@@ -23,4 +23,31 @@ describe('nine ball score data', () => {
     };
     expect(state).toEqual(expectedState);
   });
+
+  describe('was breakAndRun fuction', () => {
+    it('should return true when ball count is nine and nine ball is not pocketed', () => {
+      const state = {
+        ballCount: 9,
+        nineBallBreak: false
+      };
+      const result = wasBreakAndRun(state);
+      expect(result).toBe(true);
+    });
+    it('should return false for a nine ball break', () => {
+      const state = {
+        ballCount: 9,
+        nineBallBreak: true
+      };
+      const result = wasBreakAndRun(state);
+      expect(result).toBe(false);
+    });
+    it('should return false all balls were not pocketed', () => {
+      const state = {
+        ballCount: 7,
+        nineBallBreak: true
+      };
+      const result = wasBreakAndRun(state);
+      expect(result).toBe(false);
+    });
+  })
 })
