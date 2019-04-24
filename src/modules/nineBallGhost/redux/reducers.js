@@ -45,8 +45,9 @@ export const removeFromBallCount = (state) => {
 }
 
 export const nineBallClick = (state) => {
+  const nineBallBreak = updateNineBallBreakStatus(state);
   return Object.assign({}, state, {
-    nineBallBreak: updateNineBallBreakStatus(state),
+    nineBallBreak,
     nineBallChecked: !state.nineBallChecked,
     ballCount: updateBallCountForNineBallBreak(state.ballCount)
   })
