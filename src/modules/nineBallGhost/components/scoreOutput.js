@@ -5,7 +5,7 @@ import Scores from '../../../uiComponents/scoreList/index';
 import ScoreElement from './scoreElement';
 
 const ScoreOutput = (props) => {
-  props = { ...props, keyIndetifier: 'nineBallGhostList' };
+  props = { ...props, keyIdentifier: 'nineBallGhostListElement' };
   return (
     <Scores.ScoreList>
       <Scores.ScoreListItem {...props}>
