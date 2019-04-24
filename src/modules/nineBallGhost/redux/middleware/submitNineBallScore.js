@@ -1,9 +1,9 @@
 
-import moment from 'moment';
+import DateTime from '../../../../utils/dateAndTime';
 import { NINE_BALL_POINT_BONUS } from '../../utills';
 
 const SubmitNineBallScore = (state) => {
-  const todaysDate = moment(moment().now).format('YYYY-MM-DD');
+  const todaysDate = DateTime.today();
   const nineBallPointBonus = state.nineBallChecked ? NINE_BALL_POINT_BONUS : 0;
   const totalPoints = state.ballCount + nineBallPointBonus;
   const rackData = {

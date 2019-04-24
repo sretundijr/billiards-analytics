@@ -6,7 +6,8 @@ const initialState = () => {
     ballCount: 0,
     nineBallChecked: false,
     nineBallBreak: false,
-    gameScores: []
+    gameScores: [],
+    lifetimeData: []
   })
 }
 
@@ -21,6 +22,7 @@ const NineBallGhostReducer = (state = initialState(), action) => {
     case ACTION_CONSTANTS.NINE_BALL_BREAK_CLICK:
       return nineBallBreakClick(state);
     case ACTION_CONSTANTS.SUBMIT_SCORE:
+    case ACTION_CONSTANTS.SUBMIT_GAME:
       return Object.assign({}, state, action.data)
     default:
       return state;

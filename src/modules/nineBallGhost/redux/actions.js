@@ -1,13 +1,15 @@
 
 import SubmitNineBallScore from './middleware/submitNineBallScore';
-import UpdateGame from './middleware/updateGameSession';
+import SubmitNineBallGame from './middleware/submitNineBallGame';
+import { UpdateGame, UpdateLifetimeData } from './middleware/updateGameData';
 
 export const ACTION_CONSTANTS = {
   ADD_TO_BALL_COUNT: 'ADD_TO_BALL_COUNT',
   SUBTRACT_FROM_BALL_COUNT: 'SUBTRACT_FROM_BALL_COUNT',
   NINE_BALL_CLICK: 'NINE_BALL_CLICK',
   NINE_BALL_BREAK_CLICK: 'NINE_BALL_BREAK_CLICK',
-  SUBMIT_SCORE: 'SUBMIT_SCORE'
+  SUBMIT_SCORE: 'SUBMIT_SCORE',
+  SUBMIT_GAME: 'SUBMIT_GAME'
 };
 
 const createAction = (constant, data) => ({ type: constant, data });
@@ -40,7 +42,25 @@ const submitScore = () => {
   return (dispatch, getState) => {
     dispatch(
       createAction(ACTION_CONSTANTS.SUBMIT_SCORE,
-        UpdateGame(getState().NineBallGhostState, SubmitNineBallScore)));
+        UpdateGame(
+          getState().NineBallGhostState,
+          SubmitNineBallScore
+        )
+      )
+    );
+  }
+}
+
+const submitGame = () => {
+  return (dispatch, getState) => {
+    dispatch(
+      createAction(ACTION_CONSTANTS.SUBMIT_GAME,
+        UpdateLifetimeData(
+          getState().NineBallGhostState,
+          SubmitNineBallGame
+        )
+      )
+    );
   }
 }
 
@@ -49,5 +69,6 @@ export default {
   removeFromBallCount,
   nineBallClick,
   nineBallBreakClick,
-  submitScore
+  submitScore,
+  submitGame
 };
