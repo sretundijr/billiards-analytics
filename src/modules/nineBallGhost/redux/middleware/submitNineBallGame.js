@@ -1,5 +1,6 @@
 
 import DateTime from '../../../../utils/dateAndTime';
+import { NINE_BALL_POINT_BONUS } from '../../utills';
 
 const SubmitNineBallGame = (state) => {
   let totalScore = 0;
@@ -25,7 +26,7 @@ const SubmitNineBallGame = (state) => {
 }
 
 export const nineBallPocketed = (wasNineBallPocketed) => {
-  return wasNineBallPocketed ? 1 : 0;
+  return wasNineBallPocketed ? NINE_BALL_POINT_BONUS : 0;
 }
 
 export default SubmitNineBallGame;
