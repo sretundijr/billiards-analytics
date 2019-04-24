@@ -1,19 +1,24 @@
 import React from 'react';
-import './App.css';
+import { Provider } from 'react-redux';
+import store from './store';
 
 import NineBallGhost from './modules/nineBallGhost/index';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello new app</h1>
-      </header>
-      <section className='App-gameContainer'>
-        <NineBallGhost />
-      </section>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <header className="App-header">
+          <h1>Hello new app</h1>
+        </header>
+        <section className='App-gameContainer'>
+          <NineBallGhost />
+        </section>
+      </div>
+    </Provider>
   );
 }
 
+export { App };
 export default App;
