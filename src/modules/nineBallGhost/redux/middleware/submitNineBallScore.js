@@ -1,6 +1,6 @@
 
 import DateTime from '../../../../utils/dateAndTime';
-import { NINE_BALL_POINT_BONUS } from '../../utills';
+import { NINE_BALL_POINT_BONUS, NINE_BALL_GHOST_MAX_BALL_COUNT } from '../../utills';
 
 const SubmitNineBallScore = (state) => {
   const todaysDate = DateTime.today();
@@ -23,7 +23,7 @@ const SubmitNineBallScore = (state) => {
 }
 
 export const wasBreakAndRun = (state) => {
-  if (state.ballCount === 9 && !state.nineBallBreak) {
+  if (state.ballCount === NINE_BALL_GHOST_MAX_BALL_COUNT && !state.nineBallBreak) {
     return true;
   }
   return false;

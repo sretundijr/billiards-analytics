@@ -5,3 +5,5 @@ export const localStorageKeys = {
 }
 
 export const NINE_BALL_POINT_BONUS = 1;
+
+export const NINE_BALL_GHOST_MAX_BALL_COUNT = 9;
