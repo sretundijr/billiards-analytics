@@ -5,6 +5,8 @@ import { mapStateToProps, mapDispatchToProps } from './redux/reduxBindings';
 import PlusButton from '../../elements/buttons/plusButton';
 import ScoreInput from './components/scoreInput';
 import ScoreOutput from './components/scoreOutput';
+import ScoreBoard from '../../uiComponents/scoreBoard/index';
+import ScoreBoardElement from './components/scoreBoardElement';
 
 import './index.css';
 
@@ -14,6 +16,12 @@ const NineBallGhost = (props) => {
       <div>
         Nine Ball Ghost
       </div>
+      {
+        props.lifetimeData.length > 0 &&
+        <ScoreBoard label='Your previous Nine Ball Ghost Results!' >
+          <ScoreBoardElement {...props} />
+        </ScoreBoard>
+      }
       <ScoreInput {...props} />
       <PlusButton label='Submit Score' onClick={props.actions.submitScore} />
       <div>

@@ -1,0 +1,14 @@
+
+.scoreBoard {
+  text-align: center;
+}
+
+.scoreBoard-header {
+  margin: 10px 0 5px 0;
+}
+
+.scoreBoard-scoreElementContainer {
+  display: flex;
+  flex-direction: column;
+
+}
