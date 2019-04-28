@@ -1,5 +1,6 @@
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ScoreList = (props) => {
   return (
@@ -20,3 +21,12 @@ const ScoreListItem = (props) => {
 };
 
 export default { ScoreList, ScoreListItem };
+
+ScoreList.propTypes = {
+  props: PropTypes.object
+}
+
+ScoreListItem.propTypes = {
+  gameScores: PropTypes.arrayOf(PropTypes.object),
+  keyIdentifier: PropTypes.string.isRequired
+}

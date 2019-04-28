@@ -1,5 +1,6 @@
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './css/scoreElement.css';
 
@@ -18,3 +19,11 @@ const ScoreElement = (props) => {
 const yesOrNoString = (isYes) => isYes ? 'Yes' : 'No'
 
 export default ScoreElement;
+
+ScoreElement.propTypes = {
+  ballCount: PropTypes.number,
+  totalPoints: PropTypes.number,
+  nineBallPocketed: PropTypes.bool,
+  nineBallBreak: PropTypes.bool,
+  breakAndRun: PropTypes.bool
+}

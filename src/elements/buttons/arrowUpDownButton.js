@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleUp, faArrowAltCircleDown } from '@fortawesome/free-solid-svg-icons'
 
@@ -15,3 +16,7 @@ const ArrowUpDownButton = (props) => {
 }
 
 export default ArrowUpDownButton;
+
+ArrowUpDownButton.propTypes = {
+  onClick: PropTypes.func.isRequired
+};

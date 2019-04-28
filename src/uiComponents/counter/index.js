@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import ArrowUpDownButton from '../../elements/buttons/arrowUpDownButton';
 
@@ -15,3 +16,11 @@ const BallCounter = (props) => {
 }
 
 export default BallCounter;
+
+BallCounter.propTypes = {
+  ballCount: PropTypes.number.isRequired,
+  actions: PropTypes.shape({
+    removeFromBallCount: PropTypes.func.isRequired,
+    addToBallCount: PropTypes.func.isRequired
+  }),
+}

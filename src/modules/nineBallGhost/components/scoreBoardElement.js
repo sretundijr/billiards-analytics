@@ -1,5 +1,6 @@
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ScoreBoardElement = (props) => {
   const lifetimeData = props.lifetimeData;
@@ -14,3 +15,7 @@ const ScoreBoardElement = (props) => {
 }
 
 export default ScoreBoardElement;
+
+ScoreBoardElement.propTypes = {
+  lifetimeData: PropTypes.arrayOf(PropTypes.object).isRequired
+}

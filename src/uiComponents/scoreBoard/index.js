@@ -1,5 +1,6 @@
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './index.css';
 
@@ -16,3 +17,7 @@ const ScoreBoard = (props) => {
 }
 
 export default ScoreBoard;
+
+ScoreBoard.propTypes = {
+  label: PropTypes.string.isRequired
+}

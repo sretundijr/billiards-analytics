@@ -1,5 +1,6 @@
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Scores from '../../../uiComponents/scoreList/index';
 import ScoreElement from './scoreElement';
@@ -16,3 +17,7 @@ const ScoreOutput = (props) => {
 }
 
 export default ScoreOutput;
+
+ScoreOutput.propTypes = {
+  props: PropTypes.object
+}

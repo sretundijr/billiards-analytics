@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { mapStateToProps, mapDispatchToProps } from './redux/reduxBindings';
+import PropTypes from 'prop-types';
 
 import PlusButton from '../../elements/buttons/plusButton';
 import ScoreInput from './components/scoreInput';
@@ -39,3 +40,12 @@ const NineBallGhost = (props) => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(NineBallGhost);
 export { NineBallGhost }
+
+NineBallGhost.propTypes = {
+  lifetimeData: PropTypes.arrayOf(PropTypes.object),
+  gameScores: PropTypes.arrayOf(PropTypes.object),
+  actions: PropTypes.shape({
+    submitScore: PropTypes.func.isRequired,
+    submitGame: PropTypes.func.isRequired
+  }),
+}

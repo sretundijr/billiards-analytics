@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import BallCounter from '../../../uiComponents/counter/index';
 import CheckBoxButton from '../../../elements/buttons/checkBoxButton';
@@ -30,3 +31,12 @@ const ScoreInput = (props) => {
 }
 
 export default ScoreInput;
+
+ScoreInput.propTypes = {
+  actions: PropTypes.shape({
+    nineBallClick: PropTypes.func.isRequired,
+    nineBallBreakClick: PropTypes.func.isRequired
+  }),
+  nineBallChecked: PropTypes.bool.isRequired,
+  nineBallBreak: PropTypes.bool.isRequired
+}

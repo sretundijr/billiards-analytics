@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
@@ -13,4 +14,10 @@ const PlusButton = (props) => {
   )
 }
 
-export default PlusButton
+export default PlusButton;
+
+PlusButton.propTypes = {
+  className: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
+  label: PropTypes.string
+}
