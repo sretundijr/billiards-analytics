@@ -1,7 +1,10 @@
 
 .plusButton {
+  width: 200px;
   font-size: 20px;
-  padding: 5px;
+  padding: 10px 20px;
+  background-color: #5F7AE8;
+  color: white;
 }
 
 .plusButton-icon {

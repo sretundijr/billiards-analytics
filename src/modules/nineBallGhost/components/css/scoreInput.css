@@ -1,11 +1,15 @@
 
-.scoreInput-ballCountLabel {
+.scoreInput {
   text-align: center;
-  padding-top: 10px;
+}
+
+.scoreInput-header {
+  padding-bottom: 5px;
+  margin-bottom: 0;
 }
 
 .scoreInput-checkboxContainer {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px 10px 15px 10px;
 }

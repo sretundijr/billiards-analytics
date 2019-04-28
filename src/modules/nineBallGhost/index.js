@@ -13,8 +13,10 @@ import './index.css';
 const NineBallGhost = (props) => {
   return (
     <div className='nineBallGhost'>
-      <div>
-        Nine Ball Ghost
+      <div className='nineBallGhost-headerContainer' >
+        <h2>
+          Nine Ball Ghost
+        </h2>
       </div>
       {
         props.lifetimeData.length > 0 &&
@@ -29,7 +31,7 @@ const NineBallGhost = (props) => {
       </div>
       {
         props.gameScores.length > 0 &&
-        <PlusButton label='Finish Game' onClick={props.actions.submitGame} />
+        <PlusButton className='nineBallGhost-finishGameButton' label='Finish Game' onClick={props.actions.submitGame} />
       }
     </div>
   )

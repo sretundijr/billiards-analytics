@@ -5,12 +5,13 @@ import CheckBox from '../inputs/checkBox';
 import './checkBoxButton.css';
 
 const CheckBoxButton = (props) => {
+  // #6FABE8
   return (
     <button
       className='checkBoxButton'
       onClick={props.onClick}
       style={{
-        backgroundColor: props.checked ? 'lightBlue' : 'lightGreen'
+        backgroundColor: props.checked ? '#6EAFFF' : '#95AECC'
       }}
     >
       <CheckBox {...props} />

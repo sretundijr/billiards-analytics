@@ -6,7 +6,7 @@ import './index.css';
 const ScoreBoard = (props) => {
   return (
     <div className='scoreBoard' >
-      <h3 className='scoreBoard-header' >Score Board</h3>
+      <h3 className='scoreBoard-header' >Scoreboard</h3>
       <span>{props.label}</span>
       <div className='scoreBoard-scoreElementContainer' >
         {props.children}

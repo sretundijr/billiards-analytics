@@ -8,6 +8,7 @@ import './css/scoreInput.css';
 const ScoreInput = (props) => {
   return (
     <div className='scoreInput'>
+      <h3 className='scoreInput-header' >Enter rack data</h3>
       <div className='scoreInput-ballCountLabel'>Number of Balls Pocketed</div>
       <BallCounter {...props} />
       <div className='scoreInput-checkboxContainer'>
