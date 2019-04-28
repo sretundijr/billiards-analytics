@@ -1,0 +1,17 @@
+
+.nineBallInfoModal-container {
+  border: 2px solid #6EAFFF;
+  border-radius: 5px;
+}
+
+.nineBallInfoModal-header {
+  background-color: #6EAFFF;  
+  color: white;
+  padding: 20px;
+  width: 90%;
+}
+
+.nineBallInfoModal-content {
+  padding: 10px;
+  font-size: 18px;
+}

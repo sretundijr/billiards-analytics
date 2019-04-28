@@ -3,6 +3,8 @@ import { Provider } from 'react-redux';
 import store from './store';
 
 import NineBallGhost from './modules/nineBallGhost/index';
+import ModalConductor from './uiComponents/modals/index';
+
 import './App.css';
 
 function App() {
@@ -15,6 +17,9 @@ function App() {
         <section className='App-gameContainer'>
           <NineBallGhost />
         </section>
+        <div>
+          <ModalConductor />
+        </div>
       </div>
     </Provider>
   );
