@@ -8,17 +8,14 @@ import ScoreInput from './components/scoreInput';
 import ScoreOutput from './components/scoreOutput';
 import ScoreBoard from '../../uiComponents/scoreBoard/index';
 import ScoreBoardElement from './components/scoreBoardElement';
+import GameHeader from '../../elements/headers/gameHeader';
 
 import './index.css';
 
 const NineBallGhost = (props) => {
   return (
     <div className='nineBallGhost'>
-      <div className='nineBallGhost-headerContainer' >
-        <h2>
-          Nine Ball Ghost
-        </h2>
-      </div>
+      <GameHeader className='nineBallGhost-headerContainer' headerLabel='Nine Ball Ghost' />
       {
         props.lifetimeData.length > 0 &&
         <ScoreBoard label='Your previous Nine Ball Ghost Results!' >
