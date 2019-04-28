@@ -17,6 +17,6 @@ const GameHeader = (props) => {
 export default GameHeader;
 
 GameHeader.propTypes = {
-  GameHeader: PropTypes.string.isRequired,
+  headerLabel: PropTypes.string.isRequired,
   className: PropTypes.string.isRequired
 }
