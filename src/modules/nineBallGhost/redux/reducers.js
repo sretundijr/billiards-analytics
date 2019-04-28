@@ -1,13 +1,17 @@
 
 import { ACTION_CONSTANTS } from './actions';
+import { getFromLocal } from '../../../localStorage/index';
+import { localStorageKeys } from '../utills';
 
 const initialState = () => {
+  const gameScoresFromLocal = getFromLocal(localStorageKeys.NINE_BALL_GAME_SESSION);
+  const lifetimeDataFromLocal = getFromLocal(localStorageKeys.NINE_BALL_GHOST_LIFETIME_DATA);
   return Object.assign({
     ballCount: 0,
     nineBallChecked: false,
     nineBallBreak: false,
-    gameScores: [],
-    lifetimeData: []
+    gameScores: gameScoresFromLocal ? [...gameScoresFromLocal] : [],
+    lifetimeData: lifetimeDataFromLocal ? [...lifetimeDataFromLocal] : []
   })
 }
 

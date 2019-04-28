@@ -4,7 +4,7 @@ import { localStorageKeys } from '../../utills';
 
 export const UpdateGame = (state, callback) => {
   const currentState = callback(state);
-  saveToLocal(currentState, localStorageKeys.NINE_BALL_GAME_SESSION)
+  saveToLocal(currentState.gameScores, localStorageKeys.NINE_BALL_GAME_SESSION)
   return currentState;
 }
 
