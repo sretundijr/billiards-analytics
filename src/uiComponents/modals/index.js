@@ -5,11 +5,12 @@ import { mapStateToProps, mapDispatchToProps } from './redux/reduxBindings';
 import PropTypes from 'prop-types';
 
 import NineBallGameInfo from '../../modules/nineBallGhost/components/nineBallInfoModal';
+import { MODAL_TYPES } from './utils';
 
 const ModalConductor = (props) => {
   switch (props.selectedModal) {
-    case 'NineBallGhostGameInfo':
-      return <NineBallGameInfo />
+    case MODAL_TYPES.NINE_BALL_HELP_MODAL:
+      return <NineBallGameInfo {...props} />
     default:
       return null;
   }

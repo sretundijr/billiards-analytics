@@ -16,6 +16,7 @@ const NineBallInfoModal = (props) => {
         <GameHeader
           className='nineBallInfoModal-header'
           headerLabel='How to Play the Ghost in Nine Ball'
+          closeButton={props.actions.closeModal}
         />
         <p className='nineBallInfoModal-content'>{nineBallGhostCopy.gameRules}</p>
       </div>

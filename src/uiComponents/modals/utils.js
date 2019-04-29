@@ -1,0 +1,4 @@
+
+export const MODAL_TYPES = {
+  NINE_BALL_HELP_MODAL: 'NINE_BALL_HELP_MODAL'
+}

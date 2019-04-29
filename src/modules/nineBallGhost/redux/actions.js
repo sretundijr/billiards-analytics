@@ -1,4 +1,6 @@
 
+import { createAction } from '../../../utils/reduxUtils';
+
 import SubmitNineBallScore from './middleware/submitNineBallScore';
 import SubmitNineBallGame from './middleware/submitNineBallGame';
 import { UpdateGame, UpdateLifetimeData } from './middleware/updateGameData';
@@ -11,8 +13,6 @@ export const ACTION_CONSTANTS = {
   SUBMIT_SCORE: 'SUBMIT_SCORE',
   SUBMIT_GAME: 'SUBMIT_GAME'
 };
-
-const createAction = (constant, data) => ({ type: constant, data });
 
 const addToBallCount = () => {
   return (dispatch) => {

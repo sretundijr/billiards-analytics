@@ -18,7 +18,7 @@ const NineBallGhost = (props) => {
       <GameHeader
         className='nineBallGhost-headerContainer'
         headerLabel='Nine Ball Ghost'
-        openGameInfo={() => { }}
+        openGameInfo={props.actions.openNineBallHelpModal}
       />
       {
         props.lifetimeData.length > 0 &&
