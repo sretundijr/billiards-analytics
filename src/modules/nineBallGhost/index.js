@@ -15,7 +15,11 @@ import './index.css';
 const NineBallGhost = (props) => {
   return (
     <div className='nineBallGhost'>
-      <GameHeader className='nineBallGhost-headerContainer' headerLabel='Nine Ball Ghost' />
+      <GameHeader
+        className='nineBallGhost-headerContainer'
+        headerLabel='Nine Ball Ghost'
+        openGameInfo={() => { }}
+      />
       {
         props.lifetimeData.length > 0 &&
         <ScoreBoard label='Your previous Nine Ball Ghost Results!' >

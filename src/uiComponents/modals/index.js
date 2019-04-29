@@ -17,3 +17,7 @@ const ModalConductor = (props) => {
 
 export default connect(mapStateToProps, mapDispatchToProps)(ModalConductor);
 export { ModalConductor };
+
+ModalConductor.propTypes = {
+  selectedModal: PropTypes.string
+}

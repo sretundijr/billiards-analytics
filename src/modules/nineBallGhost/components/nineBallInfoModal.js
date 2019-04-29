@@ -13,7 +13,10 @@ const NineBallInfoModal = (props) => {
   return (
     <GameInfoModal>
       <div className='nineBallInfoModal-container'>
-        <GameHeader className='nineBallInfoModal-header' headerLabel='How to Play the Ghost in Nine Ball' />
+        <GameHeader
+          className='nineBallInfoModal-header'
+          headerLabel='How to Play the Ghost in Nine Ball'
+        />
         <p className='nineBallInfoModal-content'>{nineBallGhostCopy.gameRules}</p>
       </div>
     </GameInfoModal>
@@ -21,3 +24,7 @@ const NineBallInfoModal = (props) => {
 }
 
 export default NineBallInfoModal;
+
+NineBallInfoModal.propTypes = {
+  props: PropTypes.object
+}

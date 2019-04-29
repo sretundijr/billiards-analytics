@@ -1,0 +1,10 @@
+
+.helpButton {
+  border: none;
+  background: transparent;
+}
+
+.helpButton-helpIcon {
+  font-size: 20px;
+  color: white;
+}

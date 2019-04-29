@@ -13,3 +13,7 @@ const GameInfoModal = (props) => {
 }
 
 export default GameInfoModal;
+
+GameInfoModal.propTypes = {
+  props: PropTypes.object
+}

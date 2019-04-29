@@ -3,4 +3,11 @@
   width: 100%;
   text-align: center;
   border-radius: 5px;
+  padding-bottom: 10px;
+}
+
+.gameHeader-helpButton {
+  position: relative;
+  top: 10px;
+  left: calc(50% - 20px);
 }
